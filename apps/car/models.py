@@ -21,3 +21,4 @@ class CarModel(BaseModel):
     car_condition = models.CharField(max_length=4, choices=CarConditionChoices.choices)
     engine = models.CharField(max_length=8, choices=CarEngineChoices.choices)
     car_shop = models.ForeignKey(CarShopModel, on_delete=models.CASCADE, related_name='cars')
+
