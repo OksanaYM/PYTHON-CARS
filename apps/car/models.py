@@ -5,6 +5,7 @@ from core.models import BaseModel
 
 from apps.car.choices.car_condition_choices import CarConditionChoices
 from apps.car.choices.car_engine_choices import CarEngineChoices
+from apps.car.managers import CarManager
 from apps.car_shop.models import CarShopModel
 
 
@@ -22,3 +23,4 @@ class CarModel(BaseModel):
     engine = models.CharField(max_length=8, choices=CarEngineChoices.choices)
     car_shop = models.ForeignKey(CarShopModel, on_delete=models.CASCADE, related_name='cars')
 
+    objects = CarManager()
