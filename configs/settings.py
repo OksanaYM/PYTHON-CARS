@@ -33,6 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG') == 'True'
 
 ALLOWED_HOSTS = []
+AUTH_USER_MODEL = 'user.UserModel'
 
 
 # Application definition
@@ -46,9 +47,9 @@ INSTALLED_APPS = [
 
 
     'core',
+    'apps.user',
     'apps.car',
     'apps.car_shop',
-    'apps.user',
 ]
 
 MIDDLEWARE = [
