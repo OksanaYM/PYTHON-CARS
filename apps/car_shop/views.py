@@ -1,5 +1,6 @@
 from rest_framework import status
 from rest_framework.generics import GenericAPIView, ListCreateAPIView
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from apps.car.serializers import CarSerializer
@@ -13,6 +14,7 @@ class CarShopListCreateView(ListCreateAPIView):
 
 class CarShopAddCarView(GenericAPIView):
     queryset = CarShopModel.objects.all()
+    permission_classes = (IsAuthenticated, )
 
     def post(self, *args, **kwargs):
         car_shop = self.get_object()
