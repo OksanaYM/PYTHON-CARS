@@ -4,6 +4,8 @@ from rest_framework import serializers
 
 from apps.user.models import ProfileModel
 
+# from apps.user.models import ProfileModel
+
 UserModel = get_user_model()
 
 class ProfileSerializer(serializers.ModelSerializer):

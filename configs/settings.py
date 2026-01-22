@@ -48,7 +48,6 @@ INSTALLED_APPS = [
 
 
     'core',
-    'apps.auth',
     'apps.user',
     'apps.car',
     'apps.car_shop',
